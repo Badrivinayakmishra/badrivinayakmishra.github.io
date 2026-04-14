@@ -9,97 +9,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- GSAP for animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-    <script src="https://unpkg.com/split-type"></script>
-    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 </head>
 <body>
     <!-- Cursor -->
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
 
-    <!-- Scroll Progress Indicator -->
-    <div class="scroll-progress">
-        <span class="progress-text">0.00</span>
-    </div>
-
-    <!-- Loading Screen -->
-    <div class="loader">
-        <div class="loader-content">
-            <span class="loader-text">BVM</span>
-            <div class="loader-line"></div>
-        </div>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar">
-        <a href="#" class="nav-logo">
-            <span class="logo-text">BVM</span>
-        </a>
+        <a href="#" class="nav-logo">BVM</a>
         <div class="nav-links">
-            <a href="#about" data-text="About">About</a>
-            <a href="#work" data-text="Experience">Experience</a>
-            <a href="#contact" data-text="Contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="#work">Experience</a>
+            <a href="#contact">Contact</a>
         </div>
-        <button class="menu-toggle" aria-label="Menu">
-            <span class="toggle-line"></span>
-            <span class="toggle-line"></span>
-            <span class="toggle-text">menu</span>
+        <button class="nav-toggle">
+            <span></span>
+            <span></span>
         </button>
     </nav>
 
-    <!-- Fullscreen Menu -->
-    <div class="fullscreen-menu">
-        <div class="menu-bg"></div>
-        <div class="menu-content">
-            <div class="menu-links">
-                <a href="#hero" class="menu-link">
-                    <span class="link-num">01</span>
-                    <span class="link-text">Home</span>
-                </a>
-                <a href="#about" class="menu-link">
-                    <span class="link-num">02</span>
-                    <span class="link-text">About</span>
-                </a>
-                <a href="#work" class="menu-link">
-                    <span class="link-num">03</span>
-                    <span class="link-text">Experience</span>
-                </a>
-                <a href="#contact" class="menu-link">
-                    <span class="link-num">04</span>
-                    <span class="link-text">Contact</span>
-                </a>
-            </div>
-            <div class="menu-footer">
-                <div class="menu-social">
-                    <a href="https://www.linkedin.com/in/badri-vinayak-mishra-70811822b/" target="_blank">LinkedIn</a>
-                    <a href="mailto:badrimishra7@g.ucla.edu">Email</a>
-                </div>
-                <p class="menu-copyright">© 2026 Badri Vinayak Mishra</p>
-            </div>
-        </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#about">About</a>
+        <a href="#work">Experience</a>
+        <a href="#contact">Contact</a>
     </div>
 
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
-        <div class="hero-bg-text">
-            <span>RESEARCH</span>
-        </div>
         <div class="hero-content">
-            <p class="hero-tagline split-text">Researcher & Healthcare Analyst</p>
+            <p class="hero-tagline">Researcher & Healthcare Analyst</p>
             <h1 class="hero-name">
-                <span class="line char-reveal">Badri Vinayak</span>
-                <span class="line char-reveal">Mishra<span class="hero-comma">,</span></span>
+                <span class="line">Badri Vinayak</span>
+                <span class="line">Mishra</span>
             </h1>
-            <p class="hero-sub split-text">UCLA '26 · Published in JACC · 4.0 GPA · 526 MCAT</p>
-        </div>
-        <div class="hero-image-container">
-            <div class="hero-image-wrapper">
-                <img src="images/profile.jpeg" alt="Badri Mishra" class="hero-floating-img">
-            </div>
+            <p class="hero-sub">UCLA '26 · Published in JACC · 4.0 GPA · 526 MCAT</p>
         </div>
         <div class="scroll-hint">
             <span>Scroll</span>
@@ -110,15 +55,10 @@
     <!-- Welcome Section -->
     <section class="welcome-section">
         <div class="welcome-content">
-            <h2 class="welcome-line sans reveal-line">LEARNING</h2>
-            <h2 class="welcome-line serif reveal-line">at the bench,</h2>
-            <h2 class="welcome-line sans reveal-line">GROWING</h2>
-            <h2 class="welcome-line serif reveal-line">at the bedside</h2>
-        </div>
-        <div class="welcome-visual">
-            <div class="floating-shape shape-1"></div>
-            <div class="floating-shape shape-2"></div>
-            <div class="floating-shape shape-3"></div>
+            <h2 class="welcome-line sans">LEARNING</h2>
+            <h2 class="welcome-line serif">at the bench,</h2>
+            <h2 class="welcome-line sans">GROWING</h2>
+            <h2 class="welcome-line serif">at the bedside</h2>
         </div>
     </section>
 
@@ -211,18 +151,15 @@
     <!-- Skills Section -->
     <section class="skills-section">
         <div class="skills-text">
-            <h2 class="skills-line reveal-line">I work</h2>
-            <h2 class="skills-line reveal-line">to give</h2>
-            <h2 class="skills-line reveal-line">patients</h2>
-            <div class="rotating-words-wrapper">
-                <div class="rotating-words">
-                    <h2 class="rotate-word active">better care</h2>
-                    <h2 class="rotate-word">new treatments</h2>
-                    <h2 class="rotate-word">hope</h2>
-                    <h2 class="rotate-word">a future</h2>
-                </div>
+            <h2 class="skills-line serif">I work</h2>
+            <h2 class="skills-line serif">to advance</h2>
+            <h2 class="skills-line serif">medicine through</h2>
+            <div class="rotating-words">
+                <h2 class="rotate-word active">research</h2>
+                <h2 class="rotate-word">strategy</h2>
+                <h2 class="rotate-word">innovation</h2>
+                <h2 class="rotate-word">impact</h2>
             </div>
-            <h2 class="skills-line reveal-line serif">through science</h2>
         </div>
 
         <div class="skills-grid">
@@ -456,79 +393,30 @@
         </blockquote>
     </section>
 
-    <!-- Horizontal Scroll Projects Section -->
-    <section class="horizontal-projects">
-        <div class="projects-intro">
-            <span class="project-label">Featured Work</span>
-            <h2 class="projects-title">
-                <span class="reveal-line">Things</span>
-                <span class="reveal-line serif">I've built</span>
-            </h2>
+    <!-- Things I've Worked On Section -->
+    <section class="projects-section">
+        <div class="section-header">
+            <h2 class="section-title serif">Things I've Worked On</h2>
         </div>
-        <div class="horizontal-wrapper">
-            <div class="horizontal-track">
-                <div class="h-project" data-num="01">
-                    <div class="h-project-num">01</div>
-                    <a href="https://handucla.org/" target="_blank" class="h-project-content">
-                        <div class="h-project-image">
-                            <img src="images/team.png" alt="HAND at UCLA">
-                        </div>
-                        <div class="h-project-info">
-                            <h3 class="h-project-title">iStopShaking</h3>
-                            <p class="h-project-subtitle">HAND at UCLA</p>
-                            <p class="h-project-desc">Non-invasive wearable that mitigates Parkinson's tremors using AI-tuned IMUs and motorized gyroscopes.</p>
-                            <span class="h-project-link">View Project →</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="h-project" data-num="02">
-                    <div class="h-project-num">02</div>
-                    <a href="https://bruin-olympiad-society-7988c.web.app/index.html" target="_blank" class="h-project-content">
-                        <div class="h-project-image">
-                            <img src="images/research-poster.png" alt="Bruin Olympiad Society">
-                        </div>
-                        <div class="h-project-info">
-                            <h3 class="h-project-title">Bruin Olympiad</h3>
-                            <p class="h-project-subtitle">Co-Founder & Education Director</p>
-                            <p class="h-project-desc">Founded UCLA's first academic olympiad organization. Lead 28-member team designing STEM competition questions.</p>
-                            <span class="h-project-link">View Website →</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="h-project" data-num="03">
-                    <div class="h-project-num">03</div>
-                    <a href="https://www.jacc.org/doi/10.1016/j.jacc.2025.09.1117" target="_blank" class="h-project-content">
-                        <div class="h-project-image">
-                            <img src="images/clinical.png" alt="AI Chatbot">
-                        </div>
-                        <div class="h-project-info">
-                            <h3 class="h-project-title">AI Post-PCI Chatbot</h3>
-                            <p class="h-project-subtitle">Published in JACC</p>
-                            <p class="h-project-desc">Designed triage algorithm for AI-powered chatbot. Reduced hospitalizations from 16.3% to 4.9%.</p>
-                            <span class="h-project-link">Read Publication →</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="h-project" data-num="04">
-                    <div class="h-project-num">04</div>
-                    <a href="#" class="h-project-content">
-                        <div class="h-project-image">
-                            <img src="images/strategy-team.png" alt="UCLA Health Strategy">
-                        </div>
-                        <div class="h-project-info">
-                            <h3 class="h-project-title">UCLA Health Strategy</h3>
-                            <p class="h-project-subtitle">First Undergraduate Consultant</p>
-                            <p class="h-project-desc">Led strategic roadmap for $100M+ Rare Disease Center of Excellence. Built Python optimization models.</p>
-                            <span class="h-project-link">Learn More →</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="h-project-nav">
-            <button class="h-nav-btn prev">←</button>
-            <span class="h-nav-counter"><span class="current">01</span> / 04</span>
-            <button class="h-nav-btn next">→</button>
+        <div class="projects-grid">
+            <a href="https://handucla.org/" target="_blank" class="project-card">
+                <div class="project-icon">iStopShaking</div>
+                <h3 class="project-title">HAND at UCLA</h3>
+                <p class="project-desc">Non-invasive wearable that mitigates Parkinson's tremors using AI-tuned IMUs and motorized gyroscopes.</p>
+                <span class="project-link">View Project</span>
+            </a>
+            <a href="https://bruin-olympiad-society-7988c.web.app/index.html" target="_blank" class="project-card">
+                <div class="project-icon">BOS</div>
+                <h3 class="project-title">Bruin Olympiad Society</h3>
+                <p class="project-desc">Founded UCLA's first academic olympiad organization. Lead 28-member team designing STEM competition questions.</p>
+                <span class="project-link">View Website</span>
+            </a>
+            <a href="https://www.jacc.org/doi/10.1016/j.jacc.2025.09.1117" target="_blank" class="project-card">
+                <div class="project-icon">AI</div>
+                <h3 class="project-title">AI Chatbot for Post-PCI</h3>
+                <p class="project-desc">Designed triage algorithm for AI-powered chatbot monitoring post-PCI patients. Reduced hospitalizations from 16.3% to 4.9%.</p>
+                <span class="project-link">Published in JACC</span>
+            </a>
         </div>
     </section>
 
@@ -552,51 +440,22 @@
         </div>
     </div>
 
-    <!-- Collaborators Section -->
-    <section class="collaborators-section">
-        <div class="collab-header">
-            <h2 class="collab-title">
-                <span class="reveal-line">Organizations</span>
-                <span class="reveal-line serif">I've worked with</span>
-            </h2>
-        </div>
-        <div class="collab-logos">
-            <div class="logo-item">
-                <span class="logo-name">UCLA Health</span>
-            </div>
-            <div class="logo-item">
-                <span class="logo-name">JACC</span>
-            </div>
-            <div class="logo-item">
-                <span class="logo-name">TCT Conference</span>
-            </div>
-            <div class="logo-item">
-                <span class="logo-name">Harvard NCRC</span>
-            </div>
-            <div class="logo-item">
-                <span class="logo-name">Cheers Health</span>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="contact-content">
             <h2 class="contact-title">
-                <span class="reveal-line serif">get in</span>
-                <span class="reveal-line sans">TOUCH</span>
+                <span class="serif">get in</span>
+                <span class="sans">TOUCH</span>
             </h2>
-            <div class="contact-links-large">
-                <a href="mailto:badrimishra7@g.ucla.edu" class="contact-email">
-                    <span class="email-arrow">→</span>
-                    <span class="email-text">badrimishra7@g.ucla.edu</span>
-                </a>
-            </div>
             <p class="contact-text">Interested in research collaborations, healthcare innovation, or discussing opportunities in medicine? I'd love to connect.</p>
             <div class="contact-links">
+                <a href="mailto:badrimishra7@g.ucla.edu" class="contact-link primary">
+                    <span class="link-icon">→</span>
+                    <span class="link-text">badrimishra7@g.ucla.edu</span>
+                </a>
                 <a href="https://www.linkedin.com/in/badri-vinayak-mishra-70811822b/" target="_blank" class="contact-link">
-                    <span class="link-text">LinkedIn</span>
-                    <span class="link-arrow">→</span>
+                    <span class="link-icon">→</span>
+                    <span class="link-text">LinkedIn Profile</span>
                 </a>
             </div>
         </div>
