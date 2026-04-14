@@ -7,13 +7,28 @@
     <meta name="description" content="UCLA researcher bridging proteomics, clinical innovation, and healthcare strategy. Published in JACC. Presented at TCT Conference.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-content">
+            <span class="loader-text">BVM</span>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
     <!-- Cursor -->
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress">
+        <span class="progress-text">0.00</span>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
@@ -38,27 +53,29 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
-        <div class="hero-content">
-            <p class="hero-tagline">Researcher & Healthcare Analyst</p>
-            <h1 class="hero-name">
-                <span class="line">Badri Vinayak</span>
-                <span class="line">Mishra</span>
-            </h1>
-            <p class="hero-sub">UCLA '26 · Published in JACC · 4.0 GPA · 526 MCAT</p>
+        <div class="hero-bg">
+            <img src="images/badri-hero.jpg" alt="Badri Vinayak Mishra">
         </div>
-        <div class="scroll-hint">
+        <div class="hero-content">
+            <p class="hero-label">Welcome to my Portfolio</p>
+            <h1 class="hero-title">
+                <span class="line"><span class="line-inner">Badri Vinayak</span></span>
+                <span class="line"><span class="line-inner">Mishra</span></span>
+            </h1>
+            <p class="hero-tagline">Researcher, Healthcare Analyst, Published Author & UCLA Scholar</p>
+        </div>
+        <div class="hero-scroll">
             <span>Scroll</span>
-            <div class="scroll-line"></div>
+            <div class="scroll-arrow">↓</div>
         </div>
     </section>
 
     <!-- Welcome Section -->
     <section class="welcome-section">
         <div class="welcome-content">
-            <h2 class="welcome-line sans">LEARNING</h2>
-            <h2 class="welcome-line serif">at the bench,</h2>
-            <h2 class="welcome-line sans">GROWING</h2>
-            <h2 class="welcome-line serif">at the bedside</h2>
+            <h2 class="welcome-line sans">MAXIMIZING</h2>
+            <h2 class="welcome-line serif">learning per</h2>
+            <h2 class="welcome-line sans">UNIT TIME</h2>
         </div>
     </section>
 
@@ -440,22 +457,21 @@
         </div>
     </div>
 
-    <!-- Contact Section -->
+    <!-- Contact Section - jopecuro style -->
     <section id="contact" class="contact-section">
         <div class="contact-content">
             <h2 class="contact-title">
-                <span class="serif">get in</span>
-                <span class="sans">TOUCH</span>
+                <span class="title-line"><span class="line-inner serif">get in</span></span>
+                <span class="title-line"><span class="line-inner sans">TOUCH</span></span>
             </h2>
-            <p class="contact-text">Interested in research collaborations, healthcare innovation, or discussing opportunities in medicine? I'd love to connect.</p>
             <div class="contact-links">
-                <a href="mailto:badrimishra7@g.ucla.edu" class="contact-link primary">
-                    <span class="link-icon">→</span>
-                    <span class="link-text">badrimishra7@g.ucla.edu</span>
+                <a href="mailto:badrimishra7@g.ucla.edu" class="contact-link">
+                    <span class="link-arrow">→</span>
+                    <span class="link-label">badrimishra7@g.ucla.edu</span>
                 </a>
                 <a href="https://www.linkedin.com/in/badri-vinayak-mishra-70811822b/" target="_blank" class="contact-link">
-                    <span class="link-icon">→</span>
-                    <span class="link-text">LinkedIn Profile</span>
+                    <span class="link-arrow">→</span>
+                    <span class="link-label">LinkedIn</span>
                 </a>
             </div>
         </div>
