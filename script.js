@@ -106,49 +106,6 @@ function initHeroAnimations() {
 }
 
 // ========================================
-// CURSOR
-// ========================================
-function initCursor() {
-    const cursor = document.querySelector('.cursor');
-    const follower = document.querySelector('.cursor-follower');
-
-    if (!cursor || !follower || window.innerWidth < 768) return;
-
-    let mouseX = 0, mouseY = 0;
-    let cursorX = 0, cursorY = 0;
-    let followerX = 0, followerY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-
-    gsap.ticker.add(() => {
-        cursorX += (mouseX - cursorX) * 0.15;
-        cursorY += (mouseY - cursorY) * 0.15;
-        cursor.style.left = cursorX + 'px';
-        cursor.style.top = cursorY + 'px';
-
-        followerX += (mouseX - followerX) * 0.08;
-        followerY += (mouseY - followerY) * 0.08;
-        follower.style.left = followerX + 'px';
-        follower.style.top = followerY + 'px';
-    });
-
-    const hoverables = document.querySelectorAll('a, button, .work-tab, .award-row, .project-card, .beyond-card, .skill-tags span, .edu-highlights span, .video-link');
-    hoverables.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursor.classList.add('hover');
-            follower.classList.add('hover');
-        });
-        el.addEventListener('mouseleave', () => {
-            cursor.classList.remove('hover');
-            follower.classList.remove('hover');
-        });
-    });
-}
-
-// ========================================
 // WELCOME SECTION ANIMATIONS
 // ========================================
 function initWelcomeAnimations() {
@@ -605,7 +562,6 @@ function initParallax() {
 document.addEventListener('DOMContentLoaded', () => {
     initLoader();
     initScrollProgress();
-    initCursor();
     initWelcomeAnimations();
     initAboutAnimations();
     initSkillsAnimations();
